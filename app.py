@@ -14,7 +14,7 @@ client = OpenAI(
 def generate_response(prompt):
 #     completions = openai.Completion.create(
     completions =  client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4",#"gpt-3.5-turbo",
         messages=[
         {"role": "system", "content": "You are a helpful assistant."},
         {"role": "user", "content": "Hello!"}
