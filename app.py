@@ -30,7 +30,7 @@ def generate_response(prompt):
 
  
     message = completions["choices"][0]["text"].replace("\n", "")
-    return message
+    return message.content
  
  
 st.header("ks's AI lawyer (Demo)")
