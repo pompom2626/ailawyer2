@@ -1,11 +1,19 @@
-import openai
+#import openai
+import os
+from openai import OpenAI
 import streamlit as st
 from streamlit_chat import message
  
-openai.api_key = st.secrets["api_key"]
+#openai.api_key = st.secrets["api_key"]
+client = OpenAI(
+    # This is the default and can be omitted
+    api_key=os.environ.get("api_key"),
+)
+
  
-def generate_response(prompt):
-    completions = openai.Completion.create (
+ def generate_response(prompt):
+#     completions = openai.Completion.create(
+    completions =  client.chat.completions.create(
         engine="text-davinci-003",
         prompt=prompt,
         max_tokens=1024,
@@ -13,6 +21,8 @@ def generate_response(prompt):
         temperature=0,
         top_p=1,
     )
+
+
  
     message = completions["choices"][0]["text"].replace("\n", "")
     return message
