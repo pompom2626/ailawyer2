@@ -33,7 +33,7 @@ def generate_response(prompt):
     return message
  
  
-st.header("ks AI lawyer (Demo)")
+st.header("ks's AI lawyer (Demo)")
 st.markdown("[Home Page](https://schunglaw.com/)")
  
 if 'generated' not in st.session_state:
