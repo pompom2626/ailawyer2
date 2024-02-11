@@ -11,7 +11,7 @@ client = OpenAI(
 )
 
  
- def generate_response(prompt):
+def generate_response(prompt):
 #     completions = openai.Completion.create(
     completions =  client.chat.completions.create(
         engine="text-davinci-003",
