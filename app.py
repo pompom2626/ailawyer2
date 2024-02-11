@@ -14,6 +14,11 @@ client = OpenAI(
 def generate_response(prompt):
 #     completions = openai.Completion.create(
     completions =  client.chat.completions.create(
+        model="gpt-3.5-turbo",
+        messages=[
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": "Hello!"}
+        ],
         engine="text-davinci-003",
         prompt=prompt,
         max_tokens=1024,
