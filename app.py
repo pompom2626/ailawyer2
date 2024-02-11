@@ -29,8 +29,9 @@ def generate_response(prompt):
 
 
  
-    message = completions["choices"][0]["text"].replace("\n", "")
-    return message.content
+   # message = completions["choices"][0]["text"].replace("\n", "")
+    message = completions.choices[0].message.content.replace("\n", "")
+    return message
  
  
 st.header("ks's AI lawyer (Demo)")
