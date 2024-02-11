@@ -19,7 +19,7 @@ def generate_response(prompt):
         {"role": "system", "content": "You are a helpful assistant."},
         {"role": "user", "content": "Hello!"}
         ],
-        engine="text-davinci-003",
+       # engine="text-davinci-003",
         prompt=prompt,
         max_tokens=1024,
         stop=None,
