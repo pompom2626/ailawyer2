@@ -20,7 +20,7 @@ def generate_response(prompt):
         {"role": "user", "content": "Hello!"}
         ],
        # engine="text-davinci-003",
-        prompt=prompt,
+       # prompt=prompt,
         max_tokens=1024,
         stop=None,
         temperature=0,
